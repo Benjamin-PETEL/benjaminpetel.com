@@ -1,0 +1,45 @@
+/* -------------------------------------------------------------
+                    CSS specific page
+------------------------------------------------------------- */
+
+html {
+  height: 100%;
+}
+
+main {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1.5fr 1.5fr;
+}
+
+main h1 {
+  grid-row: 2 / 3;
+  margin: 0;
+}
+
+main h2 {
+  grid-row: 3/4;
+  margin: 0;
+}
+
+main a {
+  grid-row: 4 / 5;
+  margin: 0 auto auto;
+}
+
+footer {
+  grid-row: 3 / 4;
+}
+
+/* -------------------------------------------------------------
+                    RESPONSIVE specific page
+------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  main {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}

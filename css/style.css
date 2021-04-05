@@ -1,0 +1,189 @@
+/* --------------------------------------------------------
+                        GENERAL
+----------------------------------------------------------*/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Assistant", sans-serif;
+  color: white;
+}
+
+main {
+  padding: 4rem;
+}
+
+h1,
+h2 {
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+/* ----------------------------------------------------------
+                        SECTIONS
+-----------------------------------------------------------*/
+
+/* ------------------- HEADER -----------------------------*/
+.navbar {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-logo img {
+  height: 2rem;
+}
+
+.nav-menu a:hover {
+  color: #00c2ff;
+}
+
+.nav-menu {
+  display: flex;
+  margin: 0;
+}
+
+.nav-menu li:nth-child(1) {
+  display: none;
+}
+
+.nav-menu li {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+/* ------------------- MAIN -----------------------------*/
+main {
+  background-image: linear-gradient(45deg, #225032d2, #1b3d47da),
+    url(../img/fond.jpg);
+}
+
+/* ------------------- FOOTER -----------------------------*/
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer ul {
+  display: flex;
+  margin: 0;
+}
+
+footer ul li {
+  margin-left: 30px;
+}
+
+footer ul li img {
+  height: 35px;
+}
+
+/* ----------------------------------------------------------
+                        CLASS
+-----------------------------------------------------------*/
+.btn {
+  padding: 0.8rem;
+  border-radius: 1rem;
+  background-color: white;
+  color: black;
+  font-size: 1.3rem;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.btnImportant {
+  background-color: #48c463;
+}
+
+/* ----------------------------------------------------------
+                        RESPONSIVE
+-----------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 4rem;
+    right: -100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 1rem;
+    width: 80%;
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .nav-menu li {
+    font-size: 1.8rem;
+  }
+
+  .nav-menu li:nth-child(1) {
+    display: block;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .btn {
+    padding: 0.7rem;
+  }
+}
