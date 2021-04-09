@@ -10,15 +10,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: black;
 }
 
 main section {
-  background-color: #e0ffef;
-  border-radius: 1rem;
-  padding: 1rem;
-  max-width: 1060px;
-  margin: auto;
   width: 95%;
 }
 
