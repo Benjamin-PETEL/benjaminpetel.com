@@ -22,7 +22,6 @@ main h3 {
 }
 
 main h4 {
-  color: black;
   font-size: 1.5rem;
   text-decoration: underline;
   margin: 0;
@@ -42,11 +41,14 @@ main #selection li {
   width: 22%;
   border-radius: 0.5rem;
   padding: 0.3rem;
-  background-color: #555;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
 }
 
 main #selection li:hover {
-  background-color: #777;
+  background-color: #000;
+  color: #fff;
 }
 
 main #selection li img {
@@ -97,18 +99,13 @@ main article ul li p {
 }
 
 main section ul #button_transverse {
-  background-color: #777;
+  background-color: #555;
 }
 
 /* ----------- SECTION TRANSVERSE ----------------- */
 
 .lign {
   display: flex;
-}
-
-.btn {
-  margin: 4rem;
-  width: auto;
 }
 
 /* ----------------------------------------------------------

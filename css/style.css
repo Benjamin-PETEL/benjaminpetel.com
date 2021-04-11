@@ -31,6 +31,10 @@ h2 {
   margin-top: 0;
 }
 
+main a {
+  margin: 0 auto auto;
+}
+
 /* ----------------------------------------------------------
                         SECTIONS
 -----------------------------------------------------------*/
@@ -90,7 +94,7 @@ main section {
   margin: auto;
   padding: 2rem;
   border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.521);
+  background: rgba(0, 0, 0, 0.521);
 }
 
 .glass {
@@ -99,6 +103,7 @@ main section {
   z-index: 1;
   background: inherit;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.521);
 }
 
 .glass::before {
@@ -147,6 +152,10 @@ footer ul li img {
   background-color: white;
   color: black;
   font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
 }
 
 .btn:hover {
