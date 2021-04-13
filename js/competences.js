@@ -14,24 +14,35 @@ function displayCompetence(competence){
     document.getElementById("backend").style.display = "none";
     document.getElementById("java").style.display = "none";    
     document.getElementById("frontend").style.display = "none";
-    document.getElementById("button_transverse").style.backgroundColor = "#fff";
-    document.getElementById("button_java").style.backgroundColor = "#fff";
-    document.getElementById("button_back").style.backgroundColor = "#fff";
-    document.getElementById("button_front").style.backgroundColor = "#fff"; 
+
+    document.getElementById("button_transverse").classList.remove("btnSelected");
+    document.getElementById("button_java").classList.remove("btnSelected");
+    document.getElementById("button_back").classList.remove("btnSelected");
+    document.getElementById("button_front").classList.remove("btnSelected");
+
+    document.getElementById("button_transverse").classList.add("btn");
+    document.getElementById("button_java").classList.add("btn");
+    document.getElementById("button_back").classList.add("btn");
+    document.getElementById("button_front").classList.add("btn");
     if (competence=="transverse"){
         document.getElementById("transverse").style.display = "block";
-        document.getElementById("button_transverse").style.backgroundColor = "#555";
+        document.getElementById("button_transverse").classList.remove("btn");
+        document.getElementById("button_transverse").classList.add("btnSelected");
     }
     if (competence=="java"){
         document.getElementById("java").style.display = "block";
-        document.getElementById("button_java").style.backgroundColor = "#555";
+
+        document.getElementById("button_java").classList.remove("btn");
+        document.getElementById("button_java").classList.add("btnSelected");
     }
     if (competence=="frontend"){
         document.getElementById("frontend").style.display = "block";
-        document.getElementById("button_front").style.backgroundColor = "#555";
+        document.getElementById("button_front").classList.remove("btn");
+        document.getElementById("button_front").classList.add("btnSelected");
     }
     if(competence=="backend"){
         document.getElementById("backend").style.display = "block";
-        document.getElementById("button_back").style.backgroundColor = "#555";
+        document.getElementById("button_back").classList.remove("btn");
+        document.getElementById("button_back").classList.add("btnSelected");
     }
 }

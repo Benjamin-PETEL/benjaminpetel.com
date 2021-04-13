@@ -39,10 +39,6 @@ main #selection li {
   justify-content: center;
   align-items: center;
   width: 22%;
-  border-radius: 0.5rem;
-  padding: 0.3rem;
-  background-color: #fff;
-  color: black;
   cursor: pointer;
 }
 
@@ -57,7 +53,6 @@ main #selection li img {
 
 main #selection li p {
   margin: 0.5rem;
-  font-size: 1rem;
 }
 
 /* ----------- ARTICLES ----------------- */
@@ -98,9 +93,9 @@ main article ul li p {
   display: block;
 }
 
-main section ul #button_transverse {
+/* main section ul #button_transverse {
   background-color: #555;
-}
+} */
 
 /* ----------- SECTION TRANSVERSE ----------------- */
 
