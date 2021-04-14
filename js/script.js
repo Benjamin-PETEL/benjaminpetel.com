@@ -27,5 +27,5 @@ for(let i=0;i<mail.length; i++){
 }
 
 function MailMe(){
-    location.href = 'mailto:'+prenom+nom+client;
+    location.href = 'mailto:'+prenom+'.'+nom+client;
 }
