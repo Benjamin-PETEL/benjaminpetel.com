@@ -87,11 +87,11 @@ main a {
 
 /* ------------------- MAIN -----------------------------*/
 main {
-  background-image: linear-gradient(45deg, #a8ddbe00, #a6ced100),
-    url(../img/fond.jpg);
+  background-image: linear-gradient(45deg, #ffffff00, #ffffff00),
+    url(../img/P1000749.JPG);
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  /* background-position: bottom; */
+  background-size: cover;
+  background-position: bottom;
 }
 
 main section {
@@ -99,7 +99,7 @@ main section {
   margin: auto;
   padding: 2rem;
   border-radius: 2rem;
-  background: rgba(0, 0, 0, 0.685);
+  /* background: rgba(189, 50, 50, 0.596); */
 }
 
 .glass {
@@ -108,7 +108,7 @@ main section {
   z-index: 1;
   background: inherit;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.616);
+  background: rgba(51, 60, 61, 0.726);
 }
 
 .glass::before {
