@@ -326,7 +326,6 @@ html body main #values div ul {
 
 html body main #values div ul li {
   background-color: #353535;
-  border-radius: 1rem;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,35 +351,39 @@ html body footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  height: 4rem;
 }
 
 html body footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 10rem;
 }
 
 html body footer ul li {
-  margin-left: 30px;
-  line-height: 1rem;
-  font-size: 1rem;
+  font-size: 100%;
+  line-height: 100%;
 }
 
 html body footer ul li img {
-  height: 1.5rem;
+  height: 2rem;
 }
 
 /* ----------------------------------------------------------
                         CLASS
 -----------------------------------------------------------*/
-.btn,
-.btnSelected {
+.btn {
   padding: 0.8rem;
   min-width: 10rem;
   min-height: 5rem;
-  color: black;
   font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,19 +395,17 @@ html body footer ul li img {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-}
-
-.btn {
   background-color: white;
-}
-
-.btnSelected {
-  background-color: #555;
+  color: black;
 }
 
 .btn:hover {
   background-color: black;
   color: white;
+}
+
+.btnSelected {
+  background-color: #555;
 }
 
 .btnImportant {
