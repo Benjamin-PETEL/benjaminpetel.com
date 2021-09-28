@@ -427,16 +427,15 @@ html body footer ul li img {
   html body nav ul {
     z-index: 2;
     position: fixed;
-    top: -100%;
+    top: 4rem;
     right: -100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: black;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 80%;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     text-align: center;
@@ -452,8 +451,7 @@ html body footer ul li img {
     cursor: pointer;
   }
   html body nav .active {
-    right: 10%;
-    top: 4.5rem;
+    right: 0;
   }
   html body nav .active .bar:nth-child(2) {
     opacity: 0;
