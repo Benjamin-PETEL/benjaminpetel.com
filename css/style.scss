@@ -36,6 +36,9 @@ section {
 ----------------------------------------------------------*/
 $transition: 0.5s;
 
+/* ------------------- COLORS -----------------------------*/
+$blue: #32b6ce;
+
 
 /* ----------------------------------------------------------
                         SECTIONS
@@ -65,9 +68,14 @@ html {
       img {
         height: 2rem;
       }
+
+      a{
+        transition: $transition;
+      }
       
       a:hover {
-        color: #00c2ff;
+        color: $blue;
+        transition: $transition;
       }
       
       ul {
@@ -353,7 +361,7 @@ html {
 }
 
 .btnImportant {
-  background-color: #48c463;
+  background-color: $blue;
   transition: $transition;
 }
 

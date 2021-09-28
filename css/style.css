@@ -34,6 +34,7 @@ section div {
 /* --------------------------------------------------------
                         VARIABLES
 ----------------------------------------------------------*/
+/* ------------------- COLORS -----------------------------*/
 /* ----------------------------------------------------------
                         SECTIONS
 -----------------------------------------------------------*/
@@ -70,8 +71,15 @@ html body nav img {
   height: 2rem;
 }
 
+html body nav a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 html body nav a:hover {
-  color: #00c2ff;
+  color: #32b6ce;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 html body nav ul {
@@ -418,7 +426,7 @@ html body footer ul li img {
 }
 
 .btnImportant {
-  background-color: #48c463;
+  background-color: #32b6ce;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
