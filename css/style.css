@@ -1,6 +1,39 @@
 /* --------------------------------------------------------
                         GENERAL
 ----------------------------------------------------------*/
+h1,
+h2 {
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+  margin-top: 0;
+}
+
+main a {
+  margin: 0 auto auto;
+}
+
+section {
+  scroll-margin-top: 4rem;
+  padding: 2rem 2rem;
+}
+
+section div {
+  max-width: 1060px;
+  margin: auto;
+}
+
+/* ----------------------------------------------------------
+                        SECTIONS
+-----------------------------------------------------------*/
 html {
   font-size: 100%;
   height: 100%;
@@ -11,6 +44,7 @@ html body {
   color: white;
   height: 100%;
   /* ------------------- NAV -----------------------------*/
+  /* ------------------- FOOTER ---------------------------*/
 }
 
 html body nav {
@@ -71,6 +105,7 @@ html body main {
   /* ------------------- HOME -----------------------------*/
   /* ------------------- PRESENTATION ---------------------*/
   /* ------------------- SKILLS ---------------------------*/
+  /* ------------------- VALUES ---------------------------*/
 }
 
 html body main #home {
@@ -114,14 +149,7 @@ html body main #home a {
 
 html body main #presentation {
   background-color: #464646;
-  padding: 2rem 2rem;
   color: white;
-  scroll-margin-top: 4rem;
-}
-
-html body main #presentation div {
-  max-width: 1060px;
-  margin: auto;
 }
 
 html body main #presentation div article {
@@ -171,14 +199,10 @@ html body main #skills {
       -ms-flex-align: center;
           align-items: center;
   background-color: #323232;
-  padding: 2rem 2rem;
-  scroll-margin-top: 4rem;
 }
 
 html body main #skills div {
   width: 100%;
-  max-width: 1060px;
-  margin: auto;
   /* ----------- SELECTION ----------------- */
 }
 
@@ -285,67 +309,42 @@ html body main #skills div .lign {
   display: flex;
 }
 
-/* main {
-  padding: 4rem;
-  min-height: calc(100% - 7.7rem);
-} */
-h1,
-h2 {
-  font-family: "Source Code Pro", monospace;
+html body main #values {
+  background-color: #464646;
+}
+
+html body main #values div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body main #values div ul li {
+  background-color: #353535;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 10%;
+  width: 45%;
+  font-size: 1.2rem;
 }
 
-h1 {
-  font-size: 7rem;
-}
-
-h2 {
-  font-size: 4rem;
-  margin-top: 0;
-}
-
-main a {
-  margin: 0 auto auto;
-}
-
-/* ----------------------------------------------------------
-                        SECTIONS
------------------------------------------------------------*/
-/* ------------------- MAIN -----------------------------*/
-/* main section {
-  max-width: 1060px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-} */
-.glass {
-  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.8);
-          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.8);
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  background: rgba(51, 60, 61, 0.726);
-}
-
-.glass::before {
-  content: "";
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* box-shadow: inset 0 0 10000px rgb(255, 0, 0); */
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  margin: -20px;
-}
-
-/* ------------------- FOOTER ---------------------------*/
-footer {
+html body footer {
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,20 +355,20 @@ footer {
   padding: 0.7rem;
 }
 
-footer ul {
+html body footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
 
-footer ul li {
+html body footer ul li {
   margin-left: 30px;
   line-height: 1rem;
   font-size: 1rem;
 }
 
-footer ul li img {
+html body footer ul li img {
   height: 1.5rem;
 }
 
@@ -470,6 +469,7 @@ footer ul li img {
     /* ------------------- HOME -----------------------------*/
     /* ------------------- PRESENTATION ---------------------*/
     /* ------------------- SKILLS ---------------------------*/
+    /* ------------------- VALUES ---------------------------*/
   }
   html body main #home {
     -ms-grid-rows: 45% 25% 20% auto;
@@ -512,7 +512,7 @@ footer ul li img {
   html body main #skills {
     padding: 2rem;
   }
-  html body main #selection {
+  html body main #skills #selection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -521,12 +521,27 @@ footer ul li img {
         -ms-flex-align: center;
             align-items: center;
   }
-  html body main #selection li {
+  html body main #skills #selection li {
     width: 100%;
     margin-bottom: 0.3rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  html body main #values ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #values ul li {
+    width: 100%;
   }
   .btn {
     padding: 0.7rem;
