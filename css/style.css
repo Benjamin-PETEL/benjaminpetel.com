@@ -31,6 +31,9 @@ section div {
   margin: auto;
 }
 
+/* --------------------------------------------------------
+                        VARIABLES
+----------------------------------------------------------*/
 /* ----------------------------------------------------------
                         SECTIONS
 -----------------------------------------------------------*/
@@ -397,19 +400,27 @@ html body footer ul li img {
   text-align: center;
   background-color: white;
   color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btn:hover {
   background-color: black;
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btnSelected {
   background-color: #555;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btnImportant {
   background-color: #48c463;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* ----------------------------------------------------------

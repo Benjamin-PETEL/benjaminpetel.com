@@ -31,6 +31,10 @@ section {
   }
 }
 
+/* --------------------------------------------------------
+                        VARIABLES
+----------------------------------------------------------*/
+$transition: 0.5s;
 
 
 /* ----------------------------------------------------------
@@ -334,19 +338,23 @@ html {
   text-align: center;
   background-color: white;
   color: black;
+  transition: $transition;
 }
 
 .btn:hover {
   background-color: black;
   color: white;
+  transition: $transition;
 }
 
 .btnSelected {
   background-color: #555;
+  transition: $transition;
 }
 
 .btnImportant {
   background-color: #48c463;
+  transition: $transition;
 }
 
 /* ----------------------------------------------------------
