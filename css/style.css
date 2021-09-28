@@ -70,6 +70,7 @@ html body nav .hamburger .bar {
 html body main {
   /* ------------------- HOME -----------------------------*/
   /* ------------------- PRESENTATION ---------------------*/
+  /* ------------------- SKILLS ---------------------------*/
 }
 
 html body main #home {
@@ -156,6 +157,132 @@ html body main #presentation div ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+html body main #skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #323232;
+  padding: 2rem 2rem;
+  scroll-margin-top: 4rem;
+}
+
+html body main #skills div {
+  width: 100%;
+  max-width: 1060px;
+  margin: auto;
+  /* ----------- SELECTION ----------------- */
+}
+
+html body main #skills div h3 {
+  margin: 0;
+  text-align: center;
+}
+
+html body main #skills div h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin: 0;
+  text-align: center;
+}
+
+html body main #skills div #selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body main #skills div #selection li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 22%;
+  cursor: pointer;
+}
+
+html body main #skills div #selection li img {
+  height: 2rem;
+}
+
+html body main #skills div #selection li p {
+  margin: 0.5rem;
+}
+
+html body main #skills div #selection li:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+html body main #skills div article {
+  border-radius: 1rem;
+  margin: 0;
+  display: none;
+}
+
+html body main #skills div article ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+html body main #skills div article ul li {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 6rem;
+}
+
+html body main #skills div article ul li img {
+  height: 5rem;
+}
+
+html body main #skills div article ul li p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0rem;
+}
+
+html body main #skills div #transverse {
+  display: block;
+}
+
+html body main #skills div .lign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* main {
@@ -252,8 +379,8 @@ footer ul li img {
 .btn,
 .btnSelected {
   padding: 0.8rem;
-  min-width: 11rem;
-  min-height: 6rem;
+  min-width: 10rem;
+  min-height: 5rem;
   color: black;
   font-size: 1.3rem;
   display: -webkit-box;
@@ -342,6 +469,7 @@ footer ul li img {
   html body main {
     /* ------------------- HOME -----------------------------*/
     /* ------------------- PRESENTATION ---------------------*/
+    /* ------------------- SKILLS ---------------------------*/
   }
   html body main #home {
     -ms-grid-rows: 45% 25% 20% auto;
@@ -380,6 +508,25 @@ footer ul li img {
   html body main #presentation ul li {
     width: 100%;
     margin-bottom: 2rem;
+  }
+  html body main #skills {
+    padding: 2rem;
+  }
+  html body main #selection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #selection li {
+    width: 100%;
+    margin-bottom: 0.3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .btn {
     padding: 0.7rem;
