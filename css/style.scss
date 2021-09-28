@@ -67,19 +67,19 @@ html {
       /* ------------------- HOME -----------------------------*/
       #home{
         background-image: 
-          linear-gradient(rgba(68, 68, 68, 0.5), rgba(68, 68, 68, 0.5)),
-          url(../img/P1000749.JPG);
+        linear-gradient(rgba(68, 68, 68, 0.5), rgba(68, 68, 68, 0.5)),
+        url(../img/P1000749.JPG);
         background-attachment: fixed;
         background-position: 50% 70%;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
         width: 100%;
-
+        
         display: grid;
         align-items: flex-end;
         grid-template-rows: 50% 15% 25% auto;
-
+        
         h1 {
           grid-row: 1 / 2;
           margin: 0;
@@ -95,6 +95,51 @@ html {
           margin: auto auto 0 auto;
         }
       }
+      
+      /* ------------------- PRESENTATION ---------------------*/
+      #presentation{
+        background-color: rgb(70, 70, 70);
+        padding: 2rem 2rem;
+        color: white;
+        scroll-margin-top: 4rem;
+        
+        div{
+          max-width: 1060px;
+          margin: auto;
+
+          article {
+            //display: flex;
+            //justify-content: space-between;
+
+            img {
+              float: left;
+              width: 15rem;
+              margin-right: 1rem;
+              // height: auto;
+            }
+  
+            text-align: justify;
+            //width: calc(100% - 20rem);
+            margin: 0;
+            font-size: 1.3rem;
+
+          }
+  
+          ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 6rem auto 0;
+  
+            li {
+              width: 20%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+      
     }
   }
 
@@ -198,15 +243,14 @@ footer {
 .btn,
 .btnSelected {
   padding: 0.8rem;
-  width: 11rem;
-  height: 6rem;
-  border-radius: 1rem;
+  min-width: 11rem;
+  min-height: 6rem;
   color: black;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5rem;
+  text-align: center;
 }
 
 .btn {
@@ -284,6 +328,7 @@ footer {
       }
 
       main{
+        /* ------------------- HOME -----------------------------*/
         #home{
           grid-template-rows: 45% 25% 20% auto;
   
@@ -292,6 +337,30 @@ footer {
           }
           h2{
             font-size: 3rem;
+          }
+        }
+
+        /* ------------------- PRESENTATION ---------------------*/
+        #presentation{
+          article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              margin: 0 0 3rem 0;
+            }
+
+          }
+
+          ul {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+              width: 100%;
+              margin-bottom: 2rem;
+            }
           }
         }
       }

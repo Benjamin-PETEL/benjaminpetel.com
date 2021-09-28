@@ -69,6 +69,7 @@ html body nav .hamburger .bar {
 
 html body main {
   /* ------------------- HOME -----------------------------*/
+  /* ------------------- PRESENTATION ---------------------*/
 }
 
 html body main #home {
@@ -108,6 +109,53 @@ html body main #home a {
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
   margin: auto auto 0 auto;
+}
+
+html body main #presentation {
+  background-color: #464646;
+  padding: 2rem 2rem;
+  color: white;
+  scroll-margin-top: 4rem;
+}
+
+html body main #presentation div {
+  max-width: 1060px;
+  margin: auto;
+}
+
+html body main #presentation div article {
+  text-align: justify;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+html body main #presentation div article img {
+  float: left;
+  width: 15rem;
+  margin-right: 1rem;
+}
+
+html body main #presentation div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 6rem auto 0;
+}
+
+html body main #presentation div ul li {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* main {
@@ -204,9 +252,8 @@ footer ul li img {
 .btn,
 .btnSelected {
   padding: 0.8rem;
-  width: 11rem;
-  height: 6rem;
-  border-radius: 1rem;
+  min-width: 11rem;
+  min-height: 6rem;
   color: black;
   font-size: 1.3rem;
   display: -webkit-box;
@@ -218,7 +265,7 @@ footer ul li img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 5rem;
+  text-align: center;
 }
 
 .btn {
@@ -292,6 +339,10 @@ footer ul li img {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
   }
+  html body main {
+    /* ------------------- HOME -----------------------------*/
+    /* ------------------- PRESENTATION ---------------------*/
+  }
   html body main #home {
     -ms-grid-rows: 45% 25% 20% auto;
         grid-template-rows: 45% 25% 20% auto;
@@ -301,6 +352,34 @@ footer ul li img {
   }
   html body main #home h2 {
     font-size: 3rem;
+  }
+  html body main #presentation article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #presentation article img {
+    margin: 0 0 3rem 0;
+  }
+  html body main #presentation ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body main #presentation ul li {
+    width: 100%;
+    margin-bottom: 2rem;
   }
   .btn {
     padding: 0.7rem;
