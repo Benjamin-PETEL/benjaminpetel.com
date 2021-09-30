@@ -297,11 +297,11 @@ html body main #skills div article ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 6rem;
+  width: 33%;
 }
 
 html body main #skills div article ul li img {
-  height: 5rem;
+  height: 4.5rem;
 }
 
 html body main #skills div article ul li p {

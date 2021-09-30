@@ -251,10 +251,11 @@ html {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                max-width: 6rem;
+                // max-width: 6rem;
+                width: 33%;
   
                 img {
-                  height: 5rem;
+                  height: 4.5rem;
                 }
   
                 p {
