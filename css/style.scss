@@ -215,7 +215,7 @@ html {
               display: flex;
               justify-content: center;
               align-items: center;
-              width: 22%;
+              width: 100%;
               cursor: pointer;
   
               img {
@@ -251,10 +251,11 @@ html {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                max-width: 6rem;
+                // max-width: 6rem;
+                width: 33%;
   
                 img {
-                  height: 5rem;
+                  height: 4.5rem;
                 }
   
                 p {
@@ -428,13 +429,6 @@ html {
         /* ------------------- HOME -----------------------------*/
         #home{
           grid-template-rows: 45% 25% 20% auto;
-  
-          h1{
-            font-size: 5rem;
-          }
-          h2{
-            font-size: 3rem;
-          }
         }
 
         /* ------------------- PRESENTATION ---------------------*/
@@ -491,6 +485,13 @@ html {
         }
       }
     }
+  }
+
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 3rem;
   }
 
   .btn {
