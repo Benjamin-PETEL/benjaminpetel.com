@@ -548,6 +548,9 @@ html body footer ul li img {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  html body main #skills div article ul li img {
+    height: 3rem;
+  }
   html body main #values ul {
     display: -webkit-box;
     display: -ms-flexbox;
