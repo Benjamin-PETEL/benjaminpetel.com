@@ -429,13 +429,6 @@ html {
         /* ------------------- HOME -----------------------------*/
         #home{
           grid-template-rows: 45% 25% 20% auto;
-  
-          h1{
-            font-size: 5rem;
-          }
-          h2{
-            font-size: 3rem;
-          }
         }
 
         /* ------------------- PRESENTATION ---------------------*/
@@ -492,6 +485,13 @@ html {
         }
       }
     }
+  }
+
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 3rem;
   }
 
   .btn {

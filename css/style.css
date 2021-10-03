@@ -493,12 +493,6 @@ html body footer ul li img {
     -ms-grid-rows: 45% 25% 20% auto;
         grid-template-rows: 45% 25% 20% auto;
   }
-  html body main #home h1 {
-    font-size: 5rem;
-  }
-  html body main #home h2 {
-    font-size: 3rem;
-  }
   html body main #presentation article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -560,6 +554,12 @@ html body footer ul li img {
   }
   html body main #values ul li {
     width: 100%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3rem;
   }
   .btn {
     padding: 0.7rem;
