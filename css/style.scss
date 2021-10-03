@@ -213,13 +213,13 @@ html {
           /* ----------- SELECTION ----------------- */
           #selection {
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
   
             li {
               display: flex;
               justify-content: center;
               align-items: center;
-              width: 100%;
+              flex-grow: 1;
               cursor: pointer;
   
               img {
@@ -457,6 +457,12 @@ html {
   
               li {
                 width: 33%;
+                flex-grow: 1;
+
+                a{
+                  height: 100%;
+                  width: 100%;
+                }
               }
             }
           }
@@ -464,16 +470,18 @@ html {
 
         /* ------------------- SKILLS ---------------------------*/
         #skills{
-          padding: 2rem;
 
-          #selection {
-            flex-direction: column;
-            align-items: center;
-  
-            li {
-              width: 100%;
-              margin-bottom: 0.3rem;
-              justify-content: center;
+          div{
+
+            #selection {
+              align-items: center;
+              flex-wrap: wrap;
+    
+              li {
+                min-width: none !important;
+                // width: 4rem;
+                justify-content: center;
+              }
             }
           }
         }
@@ -503,5 +511,6 @@ html {
 
   .btn {
     padding: 0.7rem;
+    min-width: unset;
   }
 }

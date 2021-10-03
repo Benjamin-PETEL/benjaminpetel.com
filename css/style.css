@@ -248,9 +248,6 @@ html body main #skills div #selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 html body main #skills div #selection li {
@@ -263,7 +260,9 @@ html body main #skills div #selection li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   cursor: pointer;
 }
 
@@ -528,22 +527,23 @@ html body footer ul li img {
   }
   html body main #presentation div ul li {
     width: 33%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
-  html body main #skills {
-    padding: 2rem;
+  html body main #presentation div ul li a {
+    height: 100%;
+    width: 100%;
   }
-  html body main #skills #selection {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  html body main #skills div #selection {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  html body main #skills #selection li {
-    width: 100%;
-    margin-bottom: 0.3rem;
+  html body main #skills div #selection li {
+    min-width: none !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -571,6 +571,7 @@ html body footer ul li img {
   }
   .btn {
     padding: 0.7rem;
+    min-width: unset;
   }
 }
 /*# sourceMappingURL=style.css.map */
