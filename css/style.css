@@ -336,6 +336,7 @@ html body main #skills div .lign {
 
 html body main #values {
   background-color: #464646;
+  height: calc(100vh - 2* $nav-height);
 }
 
 html body main #values div ul {
@@ -364,8 +365,12 @@ html body main #values div ul li {
           justify-content: center;
   text-align: center;
   margin-bottom: 10%;
-  width: 45%;
+  width: 30%;
   font-size: 1.2rem;
+}
+
+html body main #values div ul li img {
+  height: 5rem;
 }
 
 html body footer {
@@ -551,7 +556,7 @@ html body footer ul li img {
   html body main #skills div article ul li img {
     height: 3rem;
   }
-  html body main #values ul {
+  html body main #values div ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -563,7 +568,7 @@ html body footer ul li img {
         -ms-flex-align: center;
             align-items: center;
   }
-  html body main #values ul li {
+  html body main #values div ul li {
     width: 100%;
   }
   h1 {

@@ -285,6 +285,7 @@ html {
       /* ------------------- VALUES ---------------------------*/
       #values{
         background-color: rgb(70, 70, 70);
+        height: calc(100vh - 2* $nav-height);
 
         div{
 
@@ -301,8 +302,12 @@ html {
               justify-content: center;
               text-align: center;
               margin-bottom: 10%;
-              width: 45%;
+              width: 30%;
               font-size: 1.2rem;
+
+              img{
+                height: 5rem;
+              }
             }
           }
         }
@@ -498,15 +503,19 @@ html {
 
         /* ------------------- VALUES ---------------------------*/
         #values{
-          ul{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
 
-            li {
-              width: 100%;
+          div{
+            
+            ul{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+  
+              li {
+                width: 100%;
+              }
             }
-          }
+          }      
         }
       }
     }
