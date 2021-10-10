@@ -50,14 +50,39 @@ function displayCompetence(competence){
     });
 
     skillsArticles.forEach((article) => {
-        console.log(article);
         const skill = article.id.split("_")[0];
-        console.log(skill);
-        console.log(competence);
         if (skill === competence){
-            console.log("block");
             article.style.display = "block";
         }
         else article.style.display = "none";
     });
 }
+
+// --------------------- Values ----------------------
+const values = document.querySelector("#values");
+const valuesBtn = values.querySelectorAll("li");
+const valuesArticles = values.querySelectorAll("article");
+
+valuesBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+        const value = button.id.split("_")[0];
+        displayValue(value);
+    });
+});
+
+function displayValue(value){
+    valuesArticles.forEach((article) => {
+        const articleValue = article.id.split("_")[0];
+        if (value === articleValue) article.style.display = "block";
+    });
+}
+
+// close the modal if click outside the modal
+window.onclick = ((event) => {
+    valuesArticles.forEach((article) => {
+        if(event.target === article){
+            article.style.display = "none";
+        }
+
+    });
+});
