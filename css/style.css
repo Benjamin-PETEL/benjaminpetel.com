@@ -563,10 +563,6 @@ html body footer ul li img {
     /* ------------------- SKILLS ---------------------------*/
     /* ------------------- VALUES ---------------------------*/
   }
-  html body main #home {
-    -ms-grid-rows: 45% 25% 20% auto;
-        grid-template-rows: 45% 25% 20% auto;
-  }
   html body main #presentation div article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -632,15 +628,22 @@ html body footer ul li img {
   html body main #values article div img {
     width: 100%;
   }
+  .btn {
+    padding: 0.7rem;
+    min-width: unset;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  html body main #home {
+    -ms-grid-rows: 45% 25% 20% auto;
+        grid-template-rows: 45% 25% 20% auto;
+  }
   h1 {
     font-size: 5rem;
   }
   h2 {
     font-size: 3rem;
-  }
-  .btn {
-    padding: 0.7rem;
-    min-width: unset;
   }
 }
 /*# sourceMappingURL=style.css.map */

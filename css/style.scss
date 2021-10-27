@@ -484,9 +484,9 @@ html {
 
       main{
         /* ------------------- HOME -----------------------------*/
-        #home{
-          grid-template-rows: 45% 25% 20% auto;
-        }
+        // #home{
+        //   grid-template-rows: 45% 25% 20% auto;
+        // }
 
         /* ------------------- PRESENTATION ---------------------*/
         #presentation{
@@ -579,15 +579,29 @@ html {
     }
   }
 
-  h1{
-    font-size: 5rem;
-  }
-  h2{
-    font-size: 3rem;
-  }
-
   .btn {
     padding: 0.7rem;
     min-width: unset;
   }
+}
+
+@media only screen and (max-width: 1100px) {
+  html{
+    body{
+      main{
+        #home{
+          grid-template-rows: 45% 25% 20% auto;
+        }
+      }
+    }
+  }
+  
+  h1{
+    font-size: 5rem;
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+  
 }
