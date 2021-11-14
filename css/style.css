@@ -66,6 +66,7 @@ html body nav {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1000;
 }
 
 html body nav img {
@@ -117,6 +118,7 @@ html body main {
   /* ------------------- HOME -----------------------------*/
   /* ------------------- PRESENTATION ---------------------*/
   /* ------------------- SKILLS ---------------------------*/
+  /* ------------------ PROJECTS --------------------------*/
   /* ------------------- VALUES ---------------------------*/
 }
 
@@ -334,8 +336,101 @@ html body main #skills div .lign {
   display: flex;
 }
 
-html body main #values {
+html body main #projects {
   background-color: #464646;
+}
+
+html body main #projects div .carousel_wrapper {
+  overflow: hidden;
+}
+
+html body main #projects div .carousel_wrapper .carousel {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+html body main #projects div .carousel_wrapper .carousel .carousel_photo {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem 4rem;
+  z-index: 100;
+  -webkit-transition: opacity 1s, z-index 1s, -webkit-transform 1s;
+  transition: opacity 1s, z-index 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s, z-index 1s;
+  transition: transform 1s, opacity 1s, z-index 1s, -webkit-transform 1s;
+}
+
+html body main #projects div .carousel_wrapper .carousel .carousel_photo.prev,
+html body main #projects div .carousel_wrapper .carousel .carousel_photo.next {
+  opacity: 0;
+}
+
+html body main #projects div .carousel_wrapper .carousel .carousel_photo.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+html body main #projects div .carousel_wrapper .carousel .carousel_photo.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+html body main #projects div .carousel_wrapper .carousel .carousel_photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+html body main #projects div .carousel_wrapper .carousel #carousel_button_next,
+html body main #projects div .carousel_wrapper .carousel #carousel_button_prev {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 901;
+  border: 1px solid black;
+}
+
+html body main #projects div .carousel_wrapper .carousel #carousel_button_prev {
+  left: 0;
+}
+
+html body main #projects div .carousel_wrapper .carousel #carousel_button_next {
+  right: 0;
+}
+
+html body main #projects div .carousel_wrapper .carousel #carousel_button_prev::after,
+html body main #projects div .carousel_wrapper .carousel #carousel_button_next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transform: translate(-50%, -50%) rotate(135deg);
+          transform: translate(-50%, -50%) rotate(135deg);
+}
+
+html body main #projects div .carousel_wrapper .carousel #carousel_button_next::after {
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+html body main #values {
+  background-color: #323232;
   height: calc(100vh - 2* $nav-height);
 }
 

@@ -59,6 +59,7 @@ function displayCompetence(competence){
 }
 
 // --------------------- Values ----------------------
+
 const values = document.querySelector("#values");
 const valuesBtn = values.querySelectorAll("li");
 const valuesArticles = values.querySelectorAll("article");
@@ -86,3 +87,52 @@ window.onclick = ((event) => {
 
     });
 });
+
+// -------------------- Projects ---------------------
+const items = document.querySelectorAll(".carousel_photo");
+let slide = 0;
+
+// Set event listeners
+document.querySelector("#carousel_button_next").addEventListener('click', ()=> {
+    move('next');
+});
+document.querySelector("#carousel_button_prev").addEventListener('click', ()=>{
+    move('prev')
+});
+
+function setInitialClasses(){
+    items[items.length - 1].classList.add("prev");
+    items[0].classList.add("active");
+    items[1].classList.add("next")
+}
+
+function move(direction){
+    if (direction==='next') slide++;
+    else slide--;
+
+    if (slide<0) slide=items.length -1;
+    if (slide>=items.length) slide=0;
+
+    moveCarouselTo()
+}
+
+function moveCarouselTo(){
+    // remove class active/next/previous from all elements
+    items.forEach(item =>{
+        item.classList.remove("active");
+        item.classList.remove("prev");
+        item.classList.remove("next");
+    });
+
+    // add class prev to the previous element
+    if(slide===0) items[items.length -1].classList.add("prev");
+    else items[slide-1].classList.add("prev");
+
+    // add the class active to the active element
+    items[slide].classList.add("active");
+
+    // add class next to the next element
+    if(slide===items.length -1) items[0].classList.add("next");
+    else items[slide+1].classList.add("next");
+
+}
