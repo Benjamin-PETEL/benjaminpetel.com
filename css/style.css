@@ -162,7 +162,7 @@ html body main #home a {
 }
 
 html body main #presentation {
-  background-color: #464646;
+  background-color: #333333;
   color: white;
 }
 
@@ -226,7 +226,7 @@ html body main #skills {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #323232;
+  background-color: #464646;
 }
 
 html body main #skills div {
@@ -250,6 +250,7 @@ html body main #skills div #selection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
 }
 
 html body main #skills div #selection li {
@@ -282,9 +283,8 @@ html body main #skills div #selection li:hover {
 }
 
 html body main #skills div article {
-  border-radius: 1rem;
-  margin: 0;
   display: none;
+  background-color: #333333;
 }
 
 html body main #skills div article ul {
@@ -295,7 +295,8 @@ html body main #skills div article ul {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0;
+  padding: 2rem;
 }
 
 html body main #skills div article ul li {
@@ -337,7 +338,7 @@ html body main #skills div .lign {
 }
 
 html body main #projects {
-  background-color: #464646;
+  background-color: #333333;
 }
 
 html body main #projects div .carousel_wrapper {
@@ -430,7 +431,7 @@ html body main #projects div .carousel_wrapper .carousel #carousel_button_next::
 }
 
 html body main #values {
-  background-color: #323232;
+  background-color: #464646;
   height: calc(100vh - 2* $nav-height);
 }
 
@@ -446,7 +447,7 @@ html body main #values div ul {
 }
 
 html body main #values div ul li {
-  background-color: #353535;
+  background-color: #333333;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,7 +506,7 @@ html body main #values article div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #353535;
+  background-color: #333333;
   padding: 3rem;
 }
 
@@ -589,7 +590,7 @@ html body footer ul li img {
 }
 
 .btnSelected {
-  background-color: #555;
+  background-color: #333333;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

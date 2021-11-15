@@ -6,6 +6,8 @@ $nav-height: 4rem;
 
 /* ------------------- COLORS -----------------------------*/
 $blue: #32b6ce;
+$primary-dark: #333333;
+$secondary-dark: #464646;
 
 
 /* --------------------------------------------------------
@@ -147,7 +149,7 @@ html {
       
       /* ------------------- PRESENTATION ---------------------*/
       #presentation{
-        background-color: rgb(70, 70, 70);
+        background-color: $primary-dark;
         color: white;
         
         div{
@@ -193,7 +195,7 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgb(50,50,50);
+        background-color: $secondary-dark;
         
         div{
           width: 100%;
@@ -213,6 +215,7 @@ html {
           /* ----------- SELECTION ----------------- */
           #selection {
             display: flex;
+            margin: 0;
             // justify-content: space-between;
             
             li {
@@ -221,6 +224,7 @@ html {
               align-items: center;
               flex-grow: 1;
               cursor: pointer;
+              // background-color: $primary-dark;
               
               img {
                 height: 2rem;
@@ -239,15 +243,18 @@ html {
           }
           
           article {
-            border-radius: 1rem;
-            margin: 0;
+            // border-radius: 1rem;
+
             display: none;
+            background-color: $primary-dark;
             
             ul {
               display: flex;
               justify-content: space-around;
               flex-wrap: wrap;
-              margin-top: 1rem;
+              margin-top: 0;
+              padding: 2rem;
+              // margin-top: 1rem;
               
               li {
                 padding: 1rem;
@@ -284,7 +291,7 @@ html {
       
       /* ------------------ PROJECTS --------------------------*/
       #projects{
-        background-color: rgb(70,70,70);
+        background-color: $primary-dark;
 
         div{
           .carousel_wrapper{
@@ -373,7 +380,7 @@ html {
       
       /* ------------------- VALUES ---------------------------*/
       #values{
-        background-color: rgb(50, 50, 50);
+        background-color: $secondary-dark;
         height: calc(100vh - 2* $nav-height);
         
         div{
@@ -384,7 +391,7 @@ html {
             justify-content: space-between;
   
             li {
-              background-color: #353535;
+              background-color: $primary-dark;
               padding: 1rem;
               display: flex;
               flex-direction: column;
@@ -427,7 +434,7 @@ html {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #353535;
+            background-color: $primary-dark;
             padding: 3rem;
 
             h3{
@@ -505,7 +512,7 @@ html {
 }
 
 .btnSelected {
-  background-color: #555;
+  background-color: $primary-dark;
   transition: $transition;
 }
 
