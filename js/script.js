@@ -1,4 +1,4 @@
-// -------------------- Nav Menu ---------------------
+// -------------------- NAV MENU ---------------------
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -13,7 +13,7 @@ function mobileMenu(){
     navMenu.classList.toggle("active");
 }
 
-// ---------------------- Mail -----------------------
+// ---------------------- MAIL -----------------------
 const prenom = 'benjamin';
 const nom = 'petel';
 const client = '@outlook.com';
@@ -27,7 +27,7 @@ function MailMe(){
     location.href = 'mailto:'+prenom+'.'+nom+client;
 }
 
-// --------------------- Skills ----------------------
+// --------------------- SKILLS ----------------------
 const selection = document.querySelector("#selection");
 const skillsButtons = selection.querySelectorAll(".btn");
 const skillsSection = document.querySelector("#skills");
@@ -58,38 +58,9 @@ function displayCompetence(competence){
     });
 }
 
-// --------------------- Values ----------------------
-
-const values = document.querySelector("#values");
-const valuesBtn = values.querySelectorAll("li");
-const valuesArticles = values.querySelectorAll("article");
-
-valuesBtn.forEach((button) => {
-    button.addEventListener("click", () => {
-        const value = button.id.split("_")[0];
-        displayValue(value);
-    });
-});
-
-function displayValue(value){
-    valuesArticles.forEach((article) => {
-        const articleValue = article.id.split("_")[0];
-        if (value === articleValue) article.style.display = "block";
-    });
-}
-
-// close the modal if click outside the modal
-window.onclick = ((event) => {
-    valuesArticles.forEach((article) => {
-        if(event.target === article){
-            article.style.display = "none";
-        }
-
-    });
-});
-
-// -------------------- Projects ---------------------
-const items = document.querySelectorAll(".carousel_photo");
+// -------------------- PROJECTS ---------------------
+const items = document.querySelectorAll(".carousel article");
+setInitialClasses();
 let slide = 0;
 
 // Set event listeners
@@ -136,3 +107,35 @@ function moveCarouselTo(){
     else items[slide+1].classList.add("next");
 
 }
+
+// --------------------- VALUES ----------------------
+
+const values = document.querySelector("#values");
+const valuesBtn = values.querySelectorAll("li");
+const valuesArticles = values.querySelectorAll("article");
+
+valuesBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+        const value = button.id.split("_")[0];
+        displayValue(value);
+    });
+});
+
+function displayValue(value){
+    valuesArticles.forEach((article) => {
+        const articleValue = article.id.split("_")[0];
+        if (value === articleValue) article.style.display = "block";
+    });
+}
+
+// close the modal if click outside the modal
+window.onclick = ((event) => {
+    valuesArticles.forEach((article) => {
+        if(event.target === article){
+            article.style.display = "none";
+        }
+
+    });
+});
+
+

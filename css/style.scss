@@ -294,85 +294,82 @@ html {
         background-color: $primary-dark;
 
         div{
-          .carousel_wrapper{
+
+          .carousel{
+            transform-style: preserve-3d;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             overflow: hidden;
 
-            .carousel{
-              transform-style: preserve-3d;
+            article{
+              background-color: $secondary-dark;
+              margin-bottom: 3rem;
+              cursor: pointer;
+              transition: transform .5s, opacity .5s, z-index .5s;
+              width: 80%;
+              height: 60vh;
+              display: flex;
+              justify-content: center;
+              padding: 1rem;
 
-              .carousel_photo{
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                // width: 100%;
+              img{
                 max-width: 100%;
-                margin: 0;
-                padding: 1rem 4rem;
-                z-index: 100;
-                transition: transform 1s, opacity 1s, z-index 1s;
+                max-height: 100%;
+                object-fit: contain;
               }
+            }
 
-              .carousel_photo.prev,
-              .carousel_photo.next{
-                // z-index: 800;
-                opacity: 0;
-              }
+            .prev,
+            .next{
+              position: absolute;
+              opacity: 0;
+            }
 
-              .carousel_photo.prev{
-                transform: translateX(-100%);
-              }
+            .prev{
+              transform: translateX(-100%);
+            }
 
-              .carousel_photo.next{
-                transform: translateX(100%);
-              }
+            .next{
+              transform: translateX(100%);
+            }
 
-              .carousel_photo.active{
-                opacity: 1;
-                position: relative;
-                z-index: 900;
-              }
+            .active{
+              opacity: 1;
+              position: relative;
+              z-index: 900;
+            }
 
-              #carousel_button_next,
-              #carousel_button_prev{
-                position: absolute;
-                top: 50%;
-                width: 3rem;
-                height: 3rem;
-                background-color: #fff;
-                transform: translateY(-50%);
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 901;
-                border: 1px solid black;
-              }
+            #carousel_button_next,
+            #carousel_button_prev{
+              margin-right: 0;
+              margin-left: 0;
+              position: relative;
+              top: 50%;
+              width: 3rem;
+              height: 3rem;
+              background-color: #fff;
+              border-radius: 50%;
+              cursor: pointer;
+              z-index: 901;
+            }
 
-              #carousel_button_prev{
-                left: 0;
-              }
+            #carousel_button_prev::after,
+            #carousel_button_next::after{
+              content: " ";
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              top: 50%;
+              left: 54%;
+              border-right: 2px solid black;
+              border-bottom: 2px solid black;
+              transform: translate(-50%, -50%) rotate(135deg);
+            }
 
-              #carousel_button_next{
-                right: 0;
-              }
-
-              #carousel_button_prev::after,
-              #carousel_button_next::after{
-                content: " ";
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                top: 50%;
-                left: 54%;
-                border-right: 2px solid black;
-                border-bottom: 2px solid black;
-                transform: translate(-50%, -50%) rotate(135deg);
-              }
-
-              #carousel_button_next::after{
-                left: 47%;
-                transform: translate(-50%, -50%) rotate(-45deg);
-              }
+            #carousel_button_next::after{
+              left: 47%;
+              transform: translate(-50%, -50%) rotate(-45deg);
             }
           }
         }
