@@ -14,7 +14,8 @@ $secondary-dark: #464646;
                         GENERAL
 ----------------------------------------------------------*/
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Source Code Pro", monospace;
   text-align: center;
   text-transform: uppercase;
@@ -27,6 +28,15 @@ h1 {
 h2 {
   font-size: 4rem;
   margin-top: 0;
+}
+
+h3{
+  font-size: 3rem;
+  margin: 0;
+}
+
+p{
+  font-size: 1.2rem;
 }
 
 main a {
@@ -293,7 +303,7 @@ html {
       #projects{
         background-color: $primary-dark;
 
-        div{
+        #projects_carousel{
 
           .carousel{
             transform-style: preserve-3d;
@@ -305,7 +315,7 @@ html {
             article{
               background-color: $secondary-dark;
               margin-bottom: 3rem;
-              cursor: pointer;
+
               transition: transform .5s, opacity .5s, z-index .5s;
               width: 80%;
               height: 60vh;
@@ -336,6 +346,7 @@ html {
 
             .active{
               opacity: 1;
+              cursor: pointer;
               position: relative;
               z-index: 900;
             }
@@ -378,8 +389,9 @@ html {
       /* ------------------- VALUES ---------------------------*/
       #values{
         background-color: $secondary-dark;
-        height: calc(100vh - 2* $nav-height);
+        // height: calc(100vh - 2* $nav-height);
         
+        // cards
         div{
 
           ul {
@@ -410,48 +422,7 @@ html {
               transition: $transition;
             }
           }
-        }
-
-        article{
-          z-index: 1;
-          display: none;
-          position: fixed;
-          background-color: rgba(255, 255, 255, 0.6);
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          padding: 0 2rem;
-          
-          div{
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: $primary-dark;
-            padding: 3rem;
-
-            h3{
-              font-size: 3.5rem;
-              margin: 0;
-            }
-
-            img{
-              width: 50%;
-              margin: 3rem;
-            }
-
-            p{
-              margin: 0;
-            }
-
-          }
-
-        }
-        
+        }       
       }
     }
 
@@ -500,6 +471,10 @@ html {
   background-color: white;
   color: black;
   transition: $transition;
+
+  img{
+    max-height: 2rem;
+  }
 }
 
 .btn:hover {
@@ -516,6 +491,67 @@ html {
 .btnImportant {
   background-color: $blue;
   transition: $transition;
+}
+
+.modalBackground {
+  z-index: 1001;
+  display: none;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.6);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.modalBackgroundDisplay {
+  display: block;
+}
+
+.modal{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-dark;
+  padding: 3rem;
+
+  div{
+    display: flex;
+
+    img{
+      width: 50%;
+      margin-right: 2rem;
+    }
+    div{
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+
+      p{
+        margin-top: 0;
+      }
+
+      ul{
+        display: flex;
+        justify-content: space-around;
+
+        a{
+          img{
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modalDisplay{
+  display: block;
 }
 
 /* ----------------------------------------------------------

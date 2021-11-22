@@ -74,7 +74,8 @@ document.querySelector("#carousel_button_prev").addEventListener('click', ()=>{
 function setInitialClasses(){
     items[items.length - 1].classList.add("prev");
     items[0].classList.add("active");
-    items[1].classList.add("next")
+    items[1].classList.add("next");
+    items[0].addEventListener('click', displayModal)
 }
 
 function move(direction){
@@ -84,7 +85,7 @@ function move(direction){
     if (slide<0) slide=items.length -1;
     if (slide>=items.length) slide=0;
 
-    moveCarouselTo()
+    moveCarouselTo();
 }
 
 function moveCarouselTo(){
@@ -93,6 +94,7 @@ function moveCarouselTo(){
         item.classList.remove("active");
         item.classList.remove("prev");
         item.classList.remove("next");
+        item.removeEventListener('click', displayModal);
     });
 
     // add class prev to the previous element
@@ -101,41 +103,36 @@ function moveCarouselTo(){
 
     // add the class active to the active element
     items[slide].classList.add("active");
+    items[slide].addEventListener('click', displayModal)
 
     // add class next to the next element
     if(slide===items.length -1) items[0].classList.add("next");
     else items[slide+1].classList.add("next");
-
 }
 
 // --------------------- VALUES ----------------------
-
 const values = document.querySelector("#values");
 const valuesBtn = values.querySelectorAll("li");
 const valuesArticles = values.querySelectorAll("article");
 
 valuesBtn.forEach((button) => {
-    button.addEventListener("click", () => {
-        const value = button.id.split("_")[0];
-        displayValue(value);
-    });
+    button.addEventListener("click", displayModal);
 });
 
-function displayValue(value){
-    valuesArticles.forEach((article) => {
-        const articleValue = article.id.split("_")[0];
-        if (value === articleValue) article.style.display = "block";
-    });
+// --------------------- MODALS ----------------------
+const modalBackground = document.querySelector(".modalBackground");
+const modalDisplayBtns = document.querySelectorAll(".modalDisplayBtn");
+
+function displayModal(){
+    articleName = this.id.replace('Btn', 'Article');
+    modalBackground.classList.add("modalBackgroundDisplay");
+    modalBackground.querySelector("#" + articleName).classList.add('modalDisplay');
 }
 
 // close the modal if click outside the modal
-window.onclick = ((event) => {
-    valuesArticles.forEach((article) => {
-        if(event.target === article){
-            article.style.display = "none";
-        }
-
-    });
+modalBackground.onclick = ((event) => {
+    if (event.target.classList.contains('modalBackground')){
+        modalBackground.classList.remove('modalBackgroundDisplay');
+        modalBackground.querySelector(".modalDisplay").classList.remove('modalDisplay');
+    }
 });
-
-

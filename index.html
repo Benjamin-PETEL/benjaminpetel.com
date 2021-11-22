@@ -302,21 +302,21 @@
 
         <!-- PROJECTS -->
         <section id="projects">
-            <div>
+            <div id="projects_carousel">
                 <h2>Projets</h2>
-                    <div class="carousel">
-                        <div id="carousel_button_prev"></div>
-                        <article>
-                            <img src="./img/cheatCheets.webp" alt="">
-                        </article>
-                        <article>
-                            <img src="./img/SayWoof.webp" alt="">
-                        </article>
-                        <article>
-                            <img src="./img/LogoEnglishBattle.webp" alt="">
-                        </article>
-                        <div id="carousel_button_next"></div>
-                    </div>
+                <div class="carousel">
+                    <div id="carousel_button_prev"></div>
+                    <article id="cheatsheetsBtn">
+                        <img src="./img/cheatCheets.webp" alt="">
+                    </article>
+                    <article id="dogSymfonyBtn">
+                        <img src="./img/SayWoof.webp" alt="">
+                    </article>
+                    <article id="englishBattleBtn">
+                        <img src="./img/LogoEnglishBattle.webp" alt="">
+                    </article>
+                    <div id="carousel_button_next"></div>
+                </div>
                 <a href="" class="btn btnImportant button_mail">Contactez moi</a>
             </div>
         </section>
@@ -326,56 +326,120 @@
             <div>
                 <h2>Valeurs</h2>
                 <ul>
-                    <li id="teach_button">
+                    <li id="teachBtn">
                         <img src="img/teach.svg" alt="">
                         <p>Transmission</p>
                     </li>
-                    <li id="competition_button">
+                    <li id="competitionBtn">
                         <img src="img/cup.svg" alt="">
                         <p>Compétition</p>
                     </li>
-                    <li id="team_button">
+                    <li id="teamBtn">
                         <img src="img/team.svg" alt="">
                         <p>Equipe</p>
                     </li>
-                    <!-- <li hidden>
-                        <img hidden src="img/car_design.png" alt="">
-                        <p hidden>
-                            Gestion du stress: Habitué à travailler dans des environnements très exigeants
-                        </p>
-                    </li> -->
                 </ul>
                 <a href="" class="btn btnImportant button_mail">Contactez moi</a>
             </div>
-            <article id="teach_article">
-                <div>
-                    <h3>Transmission</h3>
-                    <img src="img/Initiateur_Apnee.jpg">
-                    <p>J'ai toujours appris énormément au contact des autres. Il me semble donc normal de transmettre à mon tour ce que j'ai reçu. C'est pourquoi j'ai été amener à encadrer des jeunes en escalade. J'ai aussi passé mon brevet d'initiateur apnée. Enfin j'ai été en charge d'encadrer des jeunes ingénieurs en stage de fin d'études.</p>
-                </div>
-            </article>
-            <article id="competition_article">
-                <div>
-                    <h3>Competition</h3>
-                    <img src="img/Competition.jpg">
-                    <p>Compétiteur en natation et en escalade, j'adore les challenges. La compétition est un moyen de se fixer des objectifs et de travailler à les atteindre. C'est aussi le dépassement de soi dans les moments critique ainsi qu'un bon entrainement à la gestion du stress.</p>
-                </div>
-            </article>
-            <article id="team_article">
-                <div>
-                    <h3>Equipe</h3>
-                    <img src="img/Apnee_securite.jpg">
-                    <p>L'apnée et l'escalade sont 2 sports où la performance de l'individu n'est possible que à la condition d'avoir une confiance absolue en l'équipier. A ce titre je travail toujours en sorte que l'on puisse compter sur moi.</p>
-                </div>
-            </article>
         </section>
     </main>
+
+    <!-- Modals -->
+    <section class="modalBackground">
+
+        <!-- projects modals -->
+        <article class="modal" id="cheatsheetsArticle">
+            <h3>CheatCheets</h3>
+            <div>
+                <img src="./img/CheatSheet_Screenshot.png" alt="">
+                <div>
+                    <p>
+                        Ce projet simple a 2 buts: <br>
+                        - rendre disponible des aides memoires sur des technologies que j'ai utilisees. <br>
+                        - Apprendre de nouvelles technologies pour moi. <br>
+                    </p>
+                    <ul>
+                        <li><a class="btn" href="http://176.146.11.193:8081" target="_blank"><img src="./img/cheatCheets.webp"></a></li>
+                        <li><a class="btn" href="https://github.com/Benjamin-PETEL/CheatSheets" target="_blank"><img src="./img/github_dark.svg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article class="modal" id="dogSymfonyArticle">
+            <h3>Dog Symfony</h3>
+            <div>
+                <img src="./img/dogSymfony_Screenshot.png" alt="">
+                <div>
+                    <p>
+                        Ce projet est un projet ecole fait a 3. <br>
+                        C'est un site fictif d'adoption pour chien. <br>
+                        Il est ecrit en php avec le framework Symfony. L'acces a la BDD MariaDB se fait via doctrine.
+                        L'integration continue a ete ajouter sur Github.
+                        Le projet et en production sur un Raspberry Pi.
+                    </p>
+                    <ul>
+                        <li><a class="btn" href="http://176.146.11.193:8080" target="_blank"><img src="./img/SayWoof.webp" alt=""></a></li>
+                        <li><a class="btn" href="https://github.com/JonathanPothin/dog-symfony" target="_blank"><img src="./img/github_dark.svg" alt=""></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </article>
+        <article class="modal" id="englishBattleArticle">
+            <h3>English Battle</h3>
+            <div>
+                <img src="./img/workInProgress.png" alt="">
+                <div>
+                    <p>
+                        Projet en construction <br>
+                        Projet avec une API en Java et une application web Angular
+                    </p>
+                    <!-- <ul>
+                        <li><a class="btn" href="">English Battle</a></li>
+                        <li><a class="btn" href="">GitHub</a></li>
+                    </ul> -->
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- values modals -->
+        <article class="modal" id="teachArticle">
+            <h3>Transmission</h3>
+            <div>
+                <img src="img/Initiateur_Apnee.jpg">
+                <div>
+                    <p>J'ai toujours appris énormément au contact des autres. Il me semble donc normal de transmettre à mon tour ce que j'ai reçu. C'est pourquoi j'ai été amener à encadrer des jeunes en escalade. J'ai aussi passé mon brevet d'initiateur apnée. Enfin j'ai été en charge d'encadrer des jeunes ingénieurs en stage de fin d'études.</p>
+                </div>
+            </div>
+        </article>
+        <article class="modal" id="competitionArticle">
+            <h3>Competition</h3>
+            <div>
+                <img src="img/Competition.jpg">
+                <div>
+                    <p>Compétiteur en natation et en escalade, j'adore les challenges. La compétition est un moyen de se fixer des objectifs et de travailler à les atteindre. C'est aussi le dépassement de soi dans les moments critique ainsi qu'un bon entrainement à la gestion du stress.</p>
+                </div>
+            </div>
+        </article>
+        <article class="modal" id="teamArticle">
+            <h3>Equipe</h3>
+            <div>
+                <img src="img/Apnee_securite.jpg">
+                <div>
+                    <p>L'apnée et l'escalade sont 2 sports où la performance de l'individu n'est possible que à la condition d'avoir une confiance absolue en l'équipier. A ce titre je travail toujours en sorte que l'on puisse compter sur moi.</p>
+                </div>
+            </div>
+        </article>
+    </section>
 
     <footer>
         <ul>
             <li><a href="" class="button_mail"><img src="img/email.svg"></a></li>
             <li><a href="https://www.linkedin.com/in/benjamin-petel/" target="_blank"><img src="img/linkedin.svg"></a></li>
-            <li><a href="https://github.com/Benjamin-PETEL" target="_blank"><img src="img/github.svg"></a></li>
+            <li><a href="https://github.com/Benjamin-PETEL" target="_blank"><img src="img/github_light.svg"></a></li>
         </ul>
     </footer>
 
