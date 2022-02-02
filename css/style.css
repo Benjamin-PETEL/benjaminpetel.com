@@ -278,14 +278,11 @@ html body main #skills div #selection li {
       -ms-flex-positive: 1;
           flex-grow: 1;
   cursor: pointer;
+  min-width: unset;
 }
 
 html body main #skills div #selection li img {
   height: 2rem;
-}
-
-html body main #skills div #selection li p {
-  margin: 0.5rem;
 }
 
 html body main #skills div #selection li:hover {

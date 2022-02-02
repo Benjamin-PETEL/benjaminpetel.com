@@ -236,13 +236,10 @@ html {
               flex-grow: 1;
               cursor: pointer;
               // background-color: $primary-dark;
+              min-width: unset;
               
               img {
                 height: 2rem;
-              }
-              
-              p {
-                margin: 0.5rem;
               }
             }
             
